@@ -1,4 +1,5 @@
 //Binary_search
+// array should be sort in order before applying binary search.
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -41,3 +42,39 @@ if(k==-1){
 
     return 0;
 }
+
+
+
+// STL for binary_search.
+// need to sort array
+// stl structure
+/*binary_search(startaddress, 
+              endaddress, valuetofind)
+Returns :
+true if an element equal to valuetofind is found, else false.
+*/
+
+#include <bits/stdc++.h>
+#include<algorithm>
+#include<conio.h>
+using namespace std;
+int main()
+{
+    int a[] = { 1, 5, 8, 9, 6, 7, 3, 4, 2, 0 };
+    int asize = sizeof(a) / sizeof(a[0]);
+    sort(a, a + asize);
+    if (binary_search(a, a + 10, 2))
+        cout << "\nElement found in the array";
+    else
+        cout << "\nElement not found in the array";
+
+    if (binary_search(a, a + 10, 10))
+        cout << "\nElement found in the array";
+    else
+        cout << "\nElement not found in the array";
+
+        getch();
+
+    return 0;
+}
+
